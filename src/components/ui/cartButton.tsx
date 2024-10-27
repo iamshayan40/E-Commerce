@@ -14,7 +14,6 @@ const CartDropdown = () => {
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        {/* Changed div to prevent nested button issue */}
         <div className="bg-transparent focus:outline-none h-10 w-10 rounded-lg transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center">
           <FontAwesomeIcon icon={faCartShopping} className="w-5 h-5" />
         </div>

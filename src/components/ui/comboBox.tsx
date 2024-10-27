@@ -53,19 +53,19 @@ export function ComboboxDemo() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between font-lexend font-normal"
+          className="w-full sm:w-[200px] justify-between font-lexend font-normal mr-2"
         >
           {value
             ? language.find((langauge) => langauge.value === value)?.label
-            : "Select langauge..."}
+            : "Select language..."}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0">
+      <PopoverContent className="w-full sm:w-[200px] p-0">
         <Command>
           <CommandInput placeholder="Search Language..." />
           <CommandList>
-            <CommandEmpty>No langauge found.</CommandEmpty>
+            <CommandEmpty>No language found.</CommandEmpty>
             <CommandGroup>
               {language.map((langauge) => (
                 <CommandItem
