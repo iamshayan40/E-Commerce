@@ -53,7 +53,7 @@ export function ComboboxDemo() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full sm:w-[200px] justify-between font-lexend font-normal mr-2"
+          className="w-full sm:w-[200px] justify-between font-lexend font-light mr-2"
         >
           {value
             ? language.find((langauge) => langauge.value === value)?.label

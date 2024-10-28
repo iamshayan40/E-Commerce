@@ -12,7 +12,8 @@ const config: Config = {
 		fontFamily: {
 			lexend: ["Lexend", "sans-serif"],
 			poppins: ["Poppins", "sans-serif"],
-		  monty: ["Montserrat", "sans-serif"]
+		  monty: ["Montserrat", "sans-serif"],
+		  neue: ['neue-thin', 'sans-serif'],
 		},
   		colors: {
   			background: 'hsl(var(--background))',

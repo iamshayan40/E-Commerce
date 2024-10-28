@@ -54,7 +54,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="py-4 bg-opacity-50 sticky top-0 backdrop-blur border-b z-10 dark:text-white dark:bg-[#121212]">
+    <nav className="py-4 bg-opacity-50 sticky top-0 backdrop-blur border-b border-gray-500 z-10 dark:text-white dark:bg-black">
       <LoadingBar
         color="#fff"
         progress={progress}
@@ -64,7 +64,7 @@ const Navbar = () => {
         {/* Light Mode Image */}
         <Image
           src="/dark logo.png"
-          className="h-8 w-44 dark:hidden" // Hide in dark mode
+          className="h-8 w-44 dark:hidden" // Hide in light mode
           alt="Logo"
           width={170}
           height={90}
@@ -82,13 +82,15 @@ const Navbar = () => {
         <div className="hidden md:flex flex-grow items-center justify-center">
           <ul className="flex space-x-8 uppercase items-center mx-4">
             {navLinks.map(({ href, label }) => (
-              <li key={href}>
+              <li key={href} className="relative group">
                 <Link
                   href={href}
-                  className="hover:scale-105 hover:font-semibold transition-all duration-300 font-lexend font-light text-[0.9vw]"
+                  className="transition-all duration-300 font-neue dark:font-extralight font-semibold text-[0.9vw]"
                 >
                   {label}
                 </Link>
+                {/* Underline on hover */}
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] dark:bg-white bg-black transition-all duration-500 group-hover:w-full"></span>
               </li>
             ))}
           </ul>
